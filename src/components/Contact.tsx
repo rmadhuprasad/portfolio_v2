@@ -146,7 +146,7 @@ const Contact = () => {
 
       <footer className="w-full max-w-7xl mx-auto pt-24 border-t border-border">
         <div className="contact-fade-up flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-muted-foreground">
-          <p>© 2024 Madhuprasad Ramalingam. All Rights Reserved.</p>
+          <p>© 2025 Madhuprasad Ramalingam. All Rights Reserved.</p>
           <div className="flex gap-6">
             <a href="#home" className="hover:text-primary transition-colors">
               Home

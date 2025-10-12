@@ -78,7 +78,7 @@ const Expertise = () => {
       className="relative w-full px-8 py-24 md:px-16 lg:px-24"
     >
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 gap-12 md:gap-16">
-        <h2 className="expertise-fade-up text-6xl md:text-8xl text-muted-foreground font-bold">
+        <h2 className="expertise-fade-up text-6xl md:text-8xl font-bold">
           Expertise
         </h2>
 

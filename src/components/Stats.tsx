@@ -113,7 +113,7 @@ const Stats = () => {
       className="relative w-full px-8 py-24 md:px-16 lg:px-24 bg-secondary/50"
     >
       <div className="w-full max-w-7xl mx-auto">
-        <h2 className="stats-fade-up text-6xl md:text-8xl text-muted-foreground font-bold mb-12 md:mb-16">
+        <h2 className="stats-fade-up text-6xl md:text-8xl font-bold mb-12 md:mb-16">
           Impact
         </h2>
 
