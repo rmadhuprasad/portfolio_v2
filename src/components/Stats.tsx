@@ -92,7 +92,8 @@ const Stats = () => {
                   toggleActions: "restart none restart none",
                 },
                 onUpdate: function () {
-                  const suffix = endValue.includes("+") ? "+" : "";
+                  const suffixMatch = endValue.match(/[^0-9]+$/);
+                  const suffix = suffixMatch ? suffixMatch[0] : "";
                   numElement.textContent =
                     Math.ceil(parseFloat(numElement.textContent || "0")) + suffix;
                 },

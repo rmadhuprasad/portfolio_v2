@@ -35,13 +35,15 @@ const expertiseAreas = [
   },
   {
     icon: Target,
-    title: "Requirement Analysis",
-    description: "Translating business needs into technical solutions",
+    title: "Cybersecurity & Compliance",
+    description:
+      "Ensuring enterprise security, regulatory compliance, and risk management. Regulatory Technology (RegTech) knowledge.",
   },
   {
     icon: Database,
-    title: "Operations Management",
-    description: "Streamlining processes for scalability and efficiency",
+    title: "Team Leadership & Talent Development",
+    description:
+      "Servant leadership, high-performance team culture, and retaining technical talent.",
   },
 ];
 
@@ -99,30 +101,6 @@ const Expertise = () => {
               </p>
             </div>
           ))}
-        </div>
-
-        <div className="expertise-fade-up mt-12 p-8 bg-secondary border border-border rounded-lg">
-          <h3 className="text-2xl font-semibold mb-6 text-primary">
-            Technical Proficiencies
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div>
-              <p className="text-sm text-muted-foreground mb-2">Languages</p>
-              <p className="font-medium">C, C++, SQL</p>
-            </div>
-            <div>
-              <p className="text-sm text-muted-foreground mb-2">Databases</p>
-              <p className="font-medium">Oracle 11g, PostgreSQL</p>
-            </div>
-            <div>
-              <p className="text-sm text-muted-foreground mb-2">Development</p>
-              <p className="font-medium">MERN Stack, APIs</p>
-            </div>
-            <div>
-              <p className="text-sm text-muted-foreground mb-2">Tools</p>
-              <p className="font-medium">JIRA, Git, CI/CD</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

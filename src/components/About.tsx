@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import { Download } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.png";
+import resumePdf from "@/assets/files/resume.pdf";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,10 +52,13 @@ const About = () => {
             </p>
 
             <p className="about-fade-up text-lg text-muted-foreground leading-relaxed">
-              With 18+ years of experience in designing and architecting solutions, I
-              specialize in IT project management, business process reengineering, and
-              digital transformation across diverse domains including Banking, NBFC, Mutual
-              Funds, and Healthcare.
+              A results-oriented digital transformation leader with nearly two decades of
+              experience in IT strategy, project management, stakeholder engagement, and
+              digital transformation. Demonstrated expertise in aligning technology
+              initiatives with business objectives to drive scalability, compliance, and
+              cost efficiency across complex financial ecosystems. Passionate about
+              leveraging emerging technologies and agile methodologies to create
+              sustainable, future-ready digital platforms.
             </p>
 
             <p className="about-fade-up text-lg text-muted-foreground leading-relaxed">
@@ -62,6 +67,17 @@ const About = () => {
               professionals in delivering 40+ strategic projects managing ₹5000+ Crores in
               funds.
             </p>
+
+            <div className="about-fade-up flex flex-wrap gap-4 pt-2">
+              <a
+                href={resumePdf}
+                download
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-border bg-card/80 px-6 py-3 text-sm md:text-base font-medium hover:border-primary hover:bg-primary/5 transition-colors"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download Resume</span>
+              </a>
+            </div>
           </div>
 
           <div className="about-fade-up flex flex-col gap-8">
@@ -71,28 +87,6 @@ const About = () => {
                 alt="Madhuprasad Ramalingam - Professional Profile"
                 className="w-full h-full object-cover"
               />
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-primary">Quick Facts</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▪</span>
-                  <span>M.C.A., M.B.A (Finance) from top institutions</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▪</span>
-                  <span>PMP & PMI-ACP Certified Professional</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▪</span>
-                  <span>Six Sigma Green Belt Certified</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▪</span>
-                  <span>Based in Chennai, Tamil Nadu, India</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

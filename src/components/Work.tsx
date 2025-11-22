@@ -1,63 +1,70 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Download } from "lucide-react";
+import projectsPdf from "@/assets/files/Projects.pdf";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
     number: "01",
-    title: "Belstar Microfinance - Digital Transformation",
+    title: "Belstar Microfinance – Digital Transformation",
     company: "Belstar Microfinance Ltd",
-    period: "Dec 2023 - Present",
+    period: "Dec 2023 – Present",
     description:
-      "Leading digital initiatives for a top 10 microfinance institution. Deployed advanced accounting ERP, established digital repayment channels, and automated reconciliation processes managing ₹700 crore monthly.",
+      "Leading digital transformation initiatives for a top-10 microfinance institution in India.",
     highlights: [
-      "End-to-end loan automation implementation",
-      "Transition from outsourced to in-house development",
-      "Mobile app enhancement for superior UX",
+      "Established two digital repayment channels contributing 20% of monthly repayments.",
+      "Automated reconciliation processes covering 45% of monthly repayments.",
+      "Enhanced mobile app for a superior, user-friendly ecosystem.",
+      "Heading the internal development team; delivered 10+ internal systems streamlining HR, business, product, audit, and risk operations.",
+      "Deployed an advanced accounting ERP system supporting 1,000+ branches, 13,000+ employees, and a ₹1,00,000 Cr AUM ecosystem.",
+      "Gold Loan Vertical: Spearheaded end-to-end IT ecosystem implementation within aggressive timelines.",
+      "Gold Loan Vertical: Integrated 10+ third-party APIs.",
+      "Gold Loan Vertical: Achieved Day-1 business readiness across 50+ branches.",
     ],
   },
   {
     number: "02",
-    title: "PetroMoney Fintech - Complete IT Ecosystem",
+    title: "PetroMoney Fintech – Complete IT Ecosystem",
     company: "Green Malabar Finance Ventures (NBFC)",
-    period: "Feb 2019 - Aug 2023",
+    period: "Feb 2019 – Aug 2023",
     description:
-      "Co-founded fintech NBFC and established comprehensive IT ecosystem at 50% of market cost. Built credit, tech, and operations teams from scratch.",
+      "Co-founded fintech NBFC and established a comprehensive IT ecosystem at 50% of market cost.",
     highlights: [
-      "India's first postpaid FASTag (₹3 Cr turnover)",
-      "Developed lending product from scratch",
-      "Managed ₹5000+ Cr in revolving loans",
-      "Built complete digital infrastructure (LOS, LMS, Mobile Apps)",
+      "Built credit, technology, and operations teams from the ground up.",
+      "Launched India’s first postpaid FASTag (₹3 Cr turnover).",
+      "Developed a custom lending product from scratch.",
+      "Managed ₹5,000+ Cr in revolving loans.",
+      "Built complete digital infrastructure (LOS, LMS, Mobile Apps).",
     ],
   },
   {
     number: "03",
-    title: "IDFC Group - Technology Transformation",
-    company: "IDFC Bank / AMC / Securities",
-    period: "2010 - 2017",
+    title: "EncoreTheme Technologies",
+    company: "EncoreTheme Technologies",
+    period: "Apr 2017 – Sep 2018",
     description:
-      "Core member of Captive Development Center managing IT solutions across all IDFC group companies. Led wholesale lending migration to IDFC Bank.",
+      "Implemented first-of-its-kind lending solutions and adaptable loan workflows for NBFCs.",
     highlights: [
-      "Migrated wholesale lending suite to IDFC Bank",
-      "Delivered 12+ modules for IDFC AMC",
-      "Implemented CRM across group companies",
-      "10+ customized applications for mutual funds",
+      "Implemented first-of-its-kind lending solutions for two NBFCs in India.",
+      "Introduced loans based on POS machine transactions.",
+      "Designed loan workflows adaptable across multiple sectors.",
     ],
   },
   {
     number: "04",
-    title: "Gold Loan Vertical - Rapid IT Setup",
-    company: "Belstar Microfinance (Muthoot Finance Partnership)",
-    period: "2024",
+    title: "IDFC Group – Technology Transformation",
+    company: "IDFC Bank / AMC / Securities",
+    period: "2010 – 2017",
     description:
-      "Spearheaded end-to-end IT ecosystem implementation for new Gold Loan vertical within aggressive timeline, coordinating with parent company Muthoot Finance.",
+      "Core member of the Captive Development Center, managing technology transformation across IDFC group companies.",
     highlights: [
-      "Integrated 10+ third-party APIs",
-      "Day 1 business readiness across 50+ branches",
-      "UCIC integration with existing divisions",
+      "Migrated the wholesale lending suite from IDFC NBFC to IDFC Bank.",
+      "Delivered 12+ modules for IDFC Mutual Fund.",
+      "Implemented CRM across group companies.",
+      "Developed 10+ customized applications for mutual fund operations.",
     ],
   },
 ];
@@ -96,7 +103,7 @@ const Work = () => {
     >
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 gap-12 md:gap-16">
         <h2 className="work-fade-up text-6xl md:text-8xl font-bold">
-          Work
+          Work Impact
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 relative">
@@ -139,36 +146,15 @@ const Work = () => {
           </div>
         </div>
 
-        <div className="work-fade-up mt-12">
-          <h3 className="text-2xl font-semibold mb-6 text-primary">
-            Key API Integrations Expertise
-          </h3>
-          <div className="flex flex-wrap gap-3">
-            {[
-              "PAN",
-              "Aadhaar",
-              "eSign",
-              "eStamp",
-              "GST",
-              "Credit Bureau",
-              "UPI AutoPay",
-              "Account Aggregator",
-              "VideoKYC",
-              "eNach",
-              "Digilocker",
-              "Face Match",
-              "Bank Statement Analysis",
-              "CKYC",
-              "WhatsApp Business API",
-            ].map((api, idx) => (
-              <span
-                key={idx}
-                className="px-4 py-2 bg-secondary border border-border rounded-md text-sm hover:border-primary transition-colors"
-              >
-                {api}
-              </span>
-            ))}
-          </div>
+        <div className="work-fade-up pt-4">
+          <a
+            href={projectsPdf}
+            download
+            className="inline-flex items-center justify-center gap-2 rounded-md border border-border bg-card/80 px-6 py-3 text-sm md:text-base font-medium hover:border-primary hover:bg-primary/5 transition-colors"
+          >
+            <Download className="w-4 h-4" />
+            <span>Download Projects</span>
+          </a>
         </div>
       </div>
     </section>

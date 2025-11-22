@@ -66,7 +66,7 @@ const Header = () => {
           href="#home"
           className="text-xl font-bold hover:text-primary transition-colors"
         >
-          <span className="hidden md:inline">Madhuprasad Ramalingam</span>
+          {/* <span className="hidden md:inline">Madhuprasad Ramalingam</span> */}
           <span className="md:hidden">MR</span>
         </a>
 

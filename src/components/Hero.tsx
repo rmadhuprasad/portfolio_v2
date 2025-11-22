@@ -59,19 +59,20 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           <div>
             <p className="hero-fade-up text-2xl lg:text-4xl text-foreground/90">
-              Head of Digital Products | Fintech Innovation Leader
+              Digital Transformation Leader | Architecting Scalable & Intelligent
+              Financial Ecosystems
             </p>
           </div>
 
           <div className="flex flex-col gap-6 text-sm md:text-base text-muted-foreground">
-            <p className="hero-fade-up">
+            {/* <p className="hero-fade-up">
               Architecting digital transformation with 18+ years of experience across
               Banking, NBFC, and Financial Services.
             </p>
             <p className="hero-fade-up">
               Specialized in building scalable fintech ecosystems, leading cross-functional
               teams, and delivering strategic projects that drive business growth.
-            </p>
+            </p> */}
             <div className="hero-fade-up flex gap-4 mt-4">
               <a
                 href="mailto:r.madhuprasad@gmail.com"

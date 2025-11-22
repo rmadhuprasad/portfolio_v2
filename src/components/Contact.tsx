@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Mail, Phone, Linkedin, Globe, MapPin } from "lucide-react";
+import { Mail, Phone, Linkedin, Globe, MapPin, Download } from "lucide-react";
+import resumePdf from "@/assets/files/resume.pdf";
+import projectsPdf from "@/assets/files/Projects.pdf";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,10 +37,14 @@ const Contact = () => {
         textRef.current.innerHTML = "";
 
         chars.forEach((char) => {
-          const span = document.createElement("span");
-          span.textContent = char;
-          span.className = "inline-block";
-          textRef.current?.appendChild(span);
+          if (char === " ") {
+            textRef.current?.appendChild(document.createTextNode(" "));
+          } else {
+            const span = document.createElement("span");
+            span.textContent = char;
+            span.className = "inline-block";
+            textRef.current?.appendChild(span);
+          }
         });
 
         gsap.fromTo(
@@ -129,6 +135,25 @@ const Contact = () => {
               >
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
+              </a>
+            </div>
+
+            <div className="contact-fade-up flex flex-wrap gap-4 pt-4">
+              <a
+                href={resumePdf}
+                download
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-border bg-card/80 px-6 py-3 text-sm md:text-base font-medium hover:border-primary hover:bg-primary/5 transition-colors"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download Resume</span>
+              </a>
+              <a
+                href={projectsPdf}
+                download
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-border bg-card/80 px-6 py-3 text-sm md:text-base font-medium hover:border-primary hover:bg-primary/5 transition-colors"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download Projects</span>
               </a>
             </div>
           </div>
