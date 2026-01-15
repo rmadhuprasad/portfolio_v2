@@ -48,7 +48,7 @@ const Hero = () => {
         <div>
           <h1
             ref={nameRef}
-            className="hero-fade-up text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-none"
+            className="hero-fade-up text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none"
           >
             Madhuprasad
             <br />
@@ -59,7 +59,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           <div>
             <p className="hero-fade-up text-2xl lg:text-4xl text-foreground/90">
-              Digital Transformation Leader | Architecting Scalable & Intelligent
+              Digital Transformation Leader Architecting Scalable & Intelligent
               Financial Ecosystems
             </p>
           </div>
